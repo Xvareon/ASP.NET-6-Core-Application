@@ -1,11 +1,11 @@
 ## ASP.NET 6 Core application made with C#, Entity Framework Core, and SQL Server.
 
 ## PROJECT DEPENDENCIES
-- [Visual Studio Code (IDE)](https://visualstudio.microsoft.com/).
+- [Visual Studio(IDE)](https://visualstudio.microsoft.com/).
 - [SQL Server 2022 Developer](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - [SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16&redirectedfrom=MSDN).
 
-Include this in the installation:
+Include this in the Visual Studio installation:
 - ASP.NET and web development.
 - Azure development.
 - .NET desktop development.
