@@ -50,7 +50,7 @@ namespace aspnet6_app.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> View(int id)
+        public async Task<IActionResult> View(long id)
         {
             var product = await aspnetappDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -72,7 +72,7 @@ namespace aspnet6_app.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Update(int id)
+        public async Task<IActionResult> Update(long id)
         {
             var product = await aspnetappDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
 
