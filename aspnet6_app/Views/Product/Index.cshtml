@@ -7,6 +7,12 @@
 <a asp-controller="Product" asp-action="Index"><h2>Product List</h2></a>
 
 <a asp-controller="Product" asp-action="Create">Create New Product</a>
+<br />
+<form asp-controller="Product" asp-action="Search" method="get">
+    <input type="text" name="query" />
+    <button type="submit">Search</button>
+</form>
+<br />
 
 <table border="1">
     <tr>
@@ -31,8 +37,13 @@
             <td>@product.Description</td>
 
             <td><a href="Product/View/@product.Id">View</a></td>
-            <td>Edit</td>
-            <td>Delete</td>
+            <td><a href="Product/Update/@product.Id">Edit</a></td>
+            <td>
+                <form asp-controller="Product" asp-action="Delete" method="post">
+                    <input type="hidden" name="id" value="@product.Id" />
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
         </tr>
     }
 </table>

@@ -22,3 +22,10 @@
 <br />
 <strong>Description:</strong> @Model.Description 
 <br />
+<br />
+
+<a asp-controller="Product" asp-action="Update" asp-route-id="@Model.Id">Edit</a>
+<form asp-controller="Product" asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit">Delete</button>
+</form>
