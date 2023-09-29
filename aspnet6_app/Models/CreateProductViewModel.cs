@@ -1,12 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace aspnet6_app.Models.Domain
+﻿namespace aspnet6_app.Models
 {
-    public class Product
+    public class CreateProductViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         public string? Name { get; set; }
         public int Variant { get; set; }

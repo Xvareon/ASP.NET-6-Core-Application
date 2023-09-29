@@ -1,0 +1,38 @@
+﻿@model List<aspnet6_app.Models.Domain.Product>
+
+@{
+    ViewData["Title"] = "Index Page / All Products / Product List";
+}
+
+<a asp-controller="Product" asp-action="Index"><h2>Product List</h2></a>
+
+<a asp-controller="Product" asp-action="Create">Create New Product</a>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Variant</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Variant</td>
+            <td>@product.Qty</td>
+            <td>@product.Price</td>
+            <td>@product.Description</td>
+
+            <td>View</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    }
+</table>
