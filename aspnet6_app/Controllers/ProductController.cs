@@ -48,5 +48,28 @@ namespace aspnet6_app.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> View(int id)
+        {
+            var product = await aspnetappDbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (product != null)
+            {
+                var viewModel = new ViewProductViewModel()
+                {
+                    Id = product.Id,
+                    Name = product.Name,
+                    Variant = product.Variant,
+                    Qty = product.Qty,
+                    Price = product.Price,
+                    Description = product.Description
+                };
+                return View(viewModel);
+            }
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

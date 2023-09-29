@@ -7,22 +7,28 @@
 <a asp-controller="Product" asp-action="Create"><h2>Create New Product</h2></a>
 
 <a asp-controller="Product" asp-action="Index">Back to Product List</a>
+<br />
 
 <form action="Create" method="post">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" asp-for="Name" required><br>
+    <input type="text" id="name" name="name" asp-for="Name" required>
+    <br />
 
     <label for="variant">Variant:</label>
-    <input type="number" id="variant" name="variant" asp-for="Name"  required><br>
+    <input type="number" id="variant" name="variant" asp-for="Name"  required>
+    <br />
 
     <label for="qty">Quantity:</label>
-    <input type="number" id="qty" name="qty" asp-for="Qty" required><br>
+    <input type="number" id="qty" name="qty" asp-for="Qty" required>
+    <br />
 
     <label for="price">Price:</label>
-    <input type="number" id="price" name="price" step="0.01" asp-for="Price" required><br>
+    <input type="number" id="price" name="price" step="0.01" asp-for="Price" required>
+    <br />
 
     <label for="description">Description:</label>
-    <input type="text" id="description" name="description" asp-for="Description" required><br>
+    <input type="text" id="description" name="description" asp-for="Description" required>
+    <br />
 
     <input type="submit" value="Submit">
 </form>
