@@ -25,10 +25,10 @@ Include this in the Visual Studio installation:
 - Inside the Domain folder, create a class, named based on your DB table.
 - Populate the class with your column names.
 - Navigate to the main program: 'Program.cs'.
-- Add the code:" builder.Services.AddDbContext<YourProjectDbContext>(options => options.UseSqlServer(builder.Configuration("YourProjectConnectionString"))) ",
+- Add the code:" builder.Services.AddDbContext\<ASPNetAppDbContext>\(options => options.UseSqlServer(builder.Configuration.GetConnectionString("aspnet6_appConnectionString"))); ",
 which are imported from the Data folder and the Microsoft.EntityFrameworkCore.
 - Go to 'appsettings.json' and create a connection string property below the AllowedHosts.
-- Code:" "ConnectionStrings":{ "YourProjectConnectionString": "server=YourServerName;database=YourDBName;Trusted_connection=true" } ".
+- Code:" "ConnectionStrings": { "aspnet6_appConnectionString": "server=LAPTOP-9VM4QSIH;database=aspnet6_appDb;Trusted_connection=true;TrustServerCertificate=True" } ".
 - In the navigation bar, go to Tools -> NuGet Package Manager -> Package Manager Console.
 - Run the command:" Add-Migration "Initial Migration" " and then press enter.
 - Run another command:" Update-Database " and press enter.

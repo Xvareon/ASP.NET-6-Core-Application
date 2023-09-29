@@ -1,7 +1,11 @@
+using aspnet6_app.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ASPNetAppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("aspnet6_appConnectionString")));
 
 var app = builder.Build();
 

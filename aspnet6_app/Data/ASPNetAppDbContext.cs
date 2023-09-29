@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using aspnet6_app.Models.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace aspnet6_app.Data
 
@@ -7,8 +8,9 @@ namespace aspnet6_app.Data
     {
         public ASPNetAppDbContext(DbContextOptions options) : base(options)
         {
+
         }
 
-        public DbSet<> MyProperty { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
